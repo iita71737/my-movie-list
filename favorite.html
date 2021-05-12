@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <!-- nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- margin-top-5-->
+<!-- helper class-->
+<div class="container mt-5">
+    
+    <div class="row" id="data-panel">
+        <!-- render movie list-->
+        <div class="col-sm-3">
+            <div class="mb-2">
+                <!-- data-panel -->
+                <div class="card" >
+                    <img src="https://scontent.frmq2-1.fna.fbcdn.net/v/t1.6435-9/169092371_969296783606410_2422378448683180653_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=730e14&_nc_ohc=eibVMcETV8oAX-jWGZ6&_nc_oc=AQk4fawChW8x6INIQOD9XXOqBP4eDJJGmsTS9pdpxU5Z7HhLQIYJshC8tLT7uKuG-Xg&_nc_ht=scontent.frmq2-1.fna&oh=561486ab022459fda07450d879783b8d&oe=60A7A719" class="card-img-top" alt="movie post">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie title</h5>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary btn-show-movie" data-toggle="modal" data-target="#movie-modal">More</button>
+                        <button class="btn btn-info btn-add-favorite">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="movie-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="movie-modal-title">Movie title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="movie-modal-body">
+                    <div class="row">
+                        <div class="col-sm-8" id="movie-modal-image">
+                            <img src="https://github.com/ALPHACamp/movie-list-api/blob/master/public/posters/c9XxwwhPHdaImA2f1WEfEsbhaFB.jpg?raw=true"
+                                alt="movie-poster" class="img-fluid">
+                        </div>
+                        <div class="col-sm-4">
+                            <p><em id="movie-modal-date">release date: 2020/01/05</em></p>
+                            <p id="movie-modal-description">This is a movie.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="./favorite.js"></script>
+</body>
+</html>
